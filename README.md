@@ -69,7 +69,7 @@ If you use this code in your research, please cite:
 ```bibtex
 @article{SAESegNet,
   title={SA-ESegNet: A Shadow Attention-Driven Framework for Accurate Arbitrary-Shaped Water Region Segmentation in Complex Aerial Imagery},
-  author={Your Name},
+  author={},
   journal={},
   year={}
 }
