@@ -6,15 +6,16 @@ SA-ESegNet is a deep learning framework designed for accurate segmentation of ar
 ## Project Structure
 
 ```text
-├── shadow_det.py      
-├── Training.py        
-├── ft.py              
-├── Dataset
-      ├──Dataset_I/
-      ├──Dataset_II/
-      ├──Dataset_III/
+├── shadow_det.py          # Generate shadow-detected label images
+├── Training.py            # Train the pre-trained model on Dataset II
+├── ft.py                  # Fine-tune the pre-trained model on Dataset I
+├── Dataset/
+│   ├── Dataset_I/         # Target dataset used for fine-tuning
+│   ├── Dataset_II/        # Source dataset used for pre-training
+│   └── Dataset_III/       # Additional dataset for evaluation/testing
 └── README.md
 ```
+
 
 ## Requirements
 
