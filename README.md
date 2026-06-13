@@ -3,14 +3,6 @@
 
 SA-ESegNet is a deep learning framework designed for accurate segmentation of arbitrary-shaped water regions in complex aerial imagery. The proposed architecture incorporates a **Shadow Attention Module (SAM)** to handle shadow-induced ambiguities, effectively improving water segmentation performance.
 
-## Features
-
-* Shadow-aware water region segmentation.
-* Attention-based enhancement for improved feature representation.
-* Transfer learning using a pre-trained model.
-* Fine-tuning on target datasets for improved generalization.
-* Designed to handle complex aerial scenes with varying illumination and shadow conditions.
-
 ## Project Structure
 
 ```text
@@ -81,7 +73,3 @@ If you use this code in your research, please cite:
   year={}
 }
 ```
-
-Faculty of Engineering, University of Jaffna, Sri Lanka
-
-For questions or collaborations, please open an issue in this repository.
