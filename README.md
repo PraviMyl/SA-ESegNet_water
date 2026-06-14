@@ -13,9 +13,6 @@ SA-ESegNet is a deep learning framework designed for accurate segmentation of ar
 │   ├── Dataset_I/         # Target dataset used for fine-tuning
 │   ├── Dataset_II/        # Source dataset used for pre-training
 │   └── Dataset_III/       # Additional dataset for evaluation/testing
-├── weights/
-    ├── pre-trained_model_weight.hdf5      # Pre-trained model weights
-    ├── ft_model_weights.hdf5              # Fine-tuned model weights
 └── README.md
 ```
 
@@ -52,7 +49,7 @@ Train the network using Dataset II:
 python Training.py
 ```
 
-This step initializes and trains the model using Dataset II to learn general water segmentation features. The pre-trained model weights can be found in the weights folder.
+This step initializes and trains the model using Dataset II to learn general water segmentation features. The pre-trained model weights can be found [here](https://doi.org/10.5281/zenodo.20684973)
 
 ### Step 3: Fine-tune the Model on Dataset I
 
@@ -62,10 +59,11 @@ Fine-tune the trained model on Dataset I:
 python ft.py
 ```
 
-This step adapts the pre-trained model to the task-specific dataset, Dataset I, improving segmentation performance on the target dataset. The fine-tuned model weights can be found in the weights folder
+This step adapts the pre-trained model to the task-specific dataset, Dataset I, improving segmentation performance on the target dataset. The fine-tuned model weights can be found [here](https://doi.org/10.5281/zenodo.20684973)
 
 
 ### Step 4: Evaluation on Dataset III
+The trained model weights can be found [here](https://doi.org/10.5281/zenodo.20684973)
 
 ```bash
 python eva.py
