@@ -416,11 +416,11 @@ epochs = 3
 batch_size = 16
 
 sgd = tf.keras.optimizers.legacy.SGD(learning_rate=lr, momentum=0.9, decay = lr/epochs)
-model.compile(loss="binary_crossentropy", optimizer= sgd, metrics=[tf.keras.metrics.CategoricalAccuracy()])
+model.compile(loss="categorical_crossentropy", optimizer= sgd, metrics=[tf.keras.metrics.CategoricalAccuracy()])
 
 # checkpoint
 filepath="weights.best.hdf5"
-checkpoint = ModelCheckpoint(filepath, monitor='val_binary_accuracy', verbose=1, save_best_only=True, mode='max')
+checkpoint = ModelCheckpoint(filepath, monitor='val_categorical_accuracy', verbose=1, save_best_only=True, mode='max')
 lr_plat = ReduceLROnPlateau(patience = 5, mode = 'min')
 
 callbacks_list = [checkpoint, lr_plat]
@@ -433,8 +433,8 @@ model.save_weights('./weights/pre-trained_model_weight.hdf5')
 
 
 #plt.figure(1,2,1)
-plt.plot(history.history['binary_accuracy'])
-plt.plot(history.history['val_binary_accuracy'])
+plt.plot(history.history['categorical_accuracy'])
+plt.plot(history.history['val_categorical_accuracy'])
 plt.title('Model Accuracy')
 plt.ylabel('Accuracy')
 plt.xlabel('Epoch')
